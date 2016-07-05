@@ -1,0 +1,193 @@
+﻿.home
+	{
+		.banner-container
+		{
+			border-top:  4px solid #e0e0e0;
+		}
+	}
+
+.banner-container
+{
+	position: relative;
+	
+
+	.arrow-nav
+    {
+		display: none;
+    }
+
+	.banner
+    {
+		display: none;
+
+		&:first-child
+        {
+			display: block;
+		}
+
+		img
+        {
+			display: block;
+			margin: 0px auto;
+        }
+
+		.banner-inner
+        {			
+			position: absolute;
+			top: 0px;
+			left:  0px;
+			right:  0px;
+        }
+
+		.container
+		{
+			.inner-content
+            {
+				width: 250px;
+				background: #FFF;
+				.box-shadow(5px 5px 0px rgba(50, 50, 50, 0.2));
+				margin-top: 37px;
+				padding: 25px;
+            }
+			
+			h1
+            {
+				font-size: 34px;
+				line-height: 42px;
+				margin: 0;
+            }
+		}
+    }
+}
+.banner-nav
+{
+	border-top: 5px solid #000;
+	background: @Black;
+
+	.container
+    {
+    	a
+        {
+        	background: @Black;
+			display: inline-block;
+			width: 33.33%;
+			line-height: 45px;
+			text-align: center;
+			text-decoration: none;
+			color: @DarkLink;
+			border-top: 5px solid #000;
+			margin-top: -5px;
+			float: left;
+
+			&:hover, &:focus, &.current
+            {
+            	color: #FFF;
+				background: #000;
+				border-top: 5px solid @Blue;
+            }
+        }
+    }
+}
+
+@media (min-width: 980px)
+{
+	.banner
+    {
+    	> .container
+        {
+        	width: 100%;
+        }
+    }
+}
+
+@media (max-width: 1200px)
+{
+	.home .banner-container .banner .container .inner-content
+    {
+		margin-top: 15px;
+    }
+
+	.banner-container .banner .container .inner-content
+    {
+		.inner-content
+        {
+        	padding:  15px;
+			margin-top:  15px;
+        }
+
+		h1
+        {
+			font-size:  28px;
+			line-height:  34px;
+        }
+    }
+
+}
+
+@media (max-width: 979px)
+{
+	.banner-nav
+    {
+		display: none;
+    }
+
+	.banner-container .arrow-nav
+    {
+		display:  block;
+    	position: absolute;
+		top: 75px;
+		left: 0px;
+		right: 0px;
+		z-index: 11;
+
+		.container
+        {
+			position: relative;
+        }
+    }
+
+	.banner-container 
+    {
+		padding-top:  15px;
+
+		.banner 
+        {
+			.banner-inner 
+			{
+				position: static;
+
+				.container
+				{
+					.inner-content
+					{
+						width:  auto;
+						margin-top:  0px;
+						.box-shadow(none);
+						background: @LightGrey;
+						padding: 0px 15px 15px 15px;
+
+						h1
+						{
+							background: @Black;
+							color:  #fff;
+							padding:  10px;
+							text-align: center;
+							margin: 0px -15px;
+							font-size: 18px;
+							line-height: 22px;
+						}
+					}
+				}
+			}
+        }
+    }
+
+	
+	.home
+	{
+		.banner-container
+		{
+			margin-top: 60px;
+		}
+	}
+}

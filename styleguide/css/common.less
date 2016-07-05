@@ -1,0 +1,339 @@
+﻿// ********************************
+// FONTS
+// ********************************
+.Roboto()
+{
+	font-family: 'Roboto', sans-serif;
+	font-weight: normal;
+}
+
+// ********************************
+// COLORS
+// ********************************
+@White: #FFFFFF;
+@Black: #252525;
+@DarkGrey: #717171;
+@Grey: #C5C5C5;
+@LightGrey: #F6F6F6;
+@DarkBlue: #095676;
+@Blue: #0B7B97;
+@BlueHover: #1C9DBE;
+@DarkOrange: #A73618;
+@Orange: #E7552E;
+@OrangeHover: #EC7E52;
+@DarkLink: #8D8D8D;
+@InputError: #F8EFE5;
+@InputErrorDark: #D3BB98;
+@Error: #A73618;
+
+// Services Colors
+@sRoyalBlue: #3481C3;
+@sGreen: #0C9E5B;
+@sMustard: #D7C03E;
+@sRed: #C54444;
+@sBlue: #3D96C9;
+@sPurple: #B77CD3;
+@sOrange: #DC8F2A;
+@sRoyalBlueBorder: #165387;
+@sGreenBorder: #0B6C3F;
+@sMustardBorder: #9A892A;
+@sRedBorder: #912626;
+@sBlueBorder: #1773A8;
+@sPurpleBorder: #8C44AE;
+@sOrangeBorder: #AC6C17;
+
+// Social Colors
+@Twitter: #00abf0;
+@Facebook: #3c5a9a;
+@LinkedIn: #006599;
+@Email: #f0d079;
+@TwitterBorder: #03719d;
+@FacebookBorder: #102a61;
+@LinkedInBorder: #013b59;
+@EmailBorder: #caad28;
+
+// ********************************
+// LINKS
+// ********************************
+a
+{
+	text-decoration: underline;
+	color: @Blue;
+    transition: color .2s, border-color .2s, background-color .2s;
+	-webkit-transition: color .2s, border-color .2s, background-color .2s,;
+
+	&:hover, &:focus
+    {
+		color: @BlueHover;
+    	transition: color .2s, border-color .2s, background-color .2s;
+		-webkit-transition: color .2s, border-color .2s, background-color .2s,;
+    }
+}
+a.blue-link, a.orange-link
+{
+	display: inline-block;
+	height: 21px;
+	padding: 12px 14px;
+	color: @White;
+	font-size: 16px;
+	text-decoration: none;
+	transition: background .5s;
+
+	&.blue-link
+    {
+		border-bottom: 5px solid @DarkBlue;
+		background: @Blue;
+
+		&:hover, &:focus
+        {
+			background: @BlueHover;
+			transition: none;
+			transition: background .5s;
+        }
+    }
+	&.orange-link
+    {
+		border-bottom: 5px solid @DarkOrange;
+		background: @Orange;
+
+		&:hover, &:focus
+        {
+        	background: @OrangeHover;
+			transition: none;
+			transition: background .5s;
+        }
+    }
+	&:hover, &:focus
+    {
+		border-bottom-width: 2px;
+		padding-bottom: 15px;
+    }
+}
+
+// ********************************
+// STYLES
+// ********************************
+h1
+{
+	font-size: 30px;
+	line-height: 30px;
+	font-weight: normal;
+	margin: 0 0 30px;
+}
+h2
+{
+	font-size: 18px;
+	line-height: 18px;
+	font-weight: bold;
+	margin: 0 0 15px;
+}
+h3
+{
+	font-size: 18px;
+	line-height: 18px;
+	font-weight: normal;
+	margin: 0 0 14px;
+}
+h4
+{
+	font-size: 14px;
+	line-height: 14px;
+	font-weight: bold;
+	color: @DarkGrey;
+	margin: 0 0 8px;
+}
+
+hr
+{
+	border-top: 1px dotted @DarkGrey;
+	margin: 20px 0;
+}
+
+// ********************************
+// COMMON CLASSES
+// ********************************
+.text-hide()
+{
+	line-height: 0;
+	font-size: 0;
+	color: transparent;
+}
+.left
+{
+	float: left;
+}
+.right
+{
+	float: right;
+}
+.left60
+{
+	width: 60%;
+}
+.right30
+{
+	width: 30%;
+}
+.search-filter
+{
+	background: @LightGrey;
+	padding: 25px;
+}
+.grey-wrap
+{
+	background: @LightGrey;
+	padding: 23px;
+	margin-bottom: 30px;
+	
+	p
+    {
+    	color: @DarkGrey;
+    }
+}
+.orange-wrap
+{
+	background: #F8EFE5;
+	border: 1px solid #D8C09E;
+	padding: 23px;
+	margin-bottom: 30px;
+}
+.block-wrap
+{
+	margin-bottom: 30px;
+	overflow: hidden;
+	background: #FFF;
+}
+.half-grey, .half-white
+{
+	width: 525px;
+	padding: 30px;
+
+	&.half-grey
+    {
+		background: #EBEBEB;
+		float: left;
+		padding-bottom: 1000px;
+		margin-bottom:  -970px;
+    }
+	&.half-white
+	{
+		background: #FFF;
+		float: right;
+
+		a
+        {
+        	float: left;
+			clear: left;
+        }
+	}
+}
+@media (max-width: 1200px)
+{
+	.half-grey, .half-white
+	{
+		width: 410px;
+	}
+}
+@media (max-width: 979px)
+{
+	.half-grey, .half-white
+	{
+		width: 302px;
+	}
+}
+@media (max-width: 767px)
+{
+	.left60
+	{
+		width: 100%;
+	}
+	.right30
+	{
+		width: 100%;
+		box-sizing: border-box;
+
+		#sort-by
+        {
+        	margin-bottom: 20px;
+        }
+	}
+	.block-wrap
+	{
+		margin-bottom: 10px;
+	}
+	.half-grey, .half-white
+	{
+		width: 100%;
+		box-sizing: border-box;
+		padding: 20px;
+
+		&.half-white
+        {
+			background: #EBEBEB;
+			border-top: 1px dotted @Grey;
+        }
+	}
+}
+
+
+// ********************************
+// IMAGE REPLACEMENT
+// ********************************
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+
+// ********************************
+// STICKY
+// ********************************
+.stickem-container {
+	position: relative;
+}
+ 
+.stickit {
+	margin-left: 930px !important;
+	position: fixed;
+	top: 20px;
+}
+ 
+.stickit-end {
+	bottom: 0;
+	position: absolute;
+	right: 0;
+}
+
+@media (max-width: 1200px)
+{
+	.stickit
+    {
+    	margin-left: 740px !important;
+    }
+}
+@media (max-width: 979px)
+{
+	.stickit
+    {
+    	margin-left: 576px !important;
+		top: 80px;
+    }
+}
+@media (max-width: 767px)
+{
+	.stickit, .stickit-end {
+		position: relative;
+		margin: 0 !important;
+		top: 0;
+	}
+}

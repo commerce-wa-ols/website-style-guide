@@ -1,0 +1,111 @@
+﻿.accordion
+{
+	border-bottom: 1px dotted @Grey;
+	margin-bottom: 30px;
+
+	.accordion-group
+    {
+		border: none;
+		margin: 0;
+
+    	.accordion-heading
+        {
+        	a.accordion-toggle
+            {
+				color: @Black;
+				text-decoration: none;
+				border-top: 1px dotted @Grey;
+				padding: 15px 30px 15px 15px;
+				outline: none;
+				position: relative;
+
+				&:after
+                {
+					content: '';
+					position: absolute;
+					top: 13px;
+					right: 5px;
+					background: @Blue url(../../img/sprite.png) 0px -35px;
+					width: 20px;
+					height: 20px;
+					.rounded(10px);
+					transition: background-color .5s, color .5s;
+                }
+				&:hover, &:focus
+                {
+					background-color: @DarkBlue;
+					color: @White;
+
+					&:after
+                    {
+                    	background-color: @White;
+						transition: background-color .5s, color .5s;
+						background-position: 0px -135px;
+                    }
+                }
+				&.accordion-active
+                {
+					background-color: @DarkBlue;
+					color: @White;
+
+                	&:after
+                    {
+						background-position: 0px -55px;
+						background-color: @White;
+                    }
+                }
+            }
+        }
+		.accordion-body
+        {
+        	.accordion-inner
+            {
+            	border: none;
+				background: @LightGrey;
+				padding: 25px 28px;
+
+				p, li
+                {
+                	color: @DarkGrey;
+                }
+				ul
+                {
+					padding-left: 20px;
+
+					li
+					{
+                		margin-bottom: 10px;
+					}
+                }
+            }
+			&.in
+            {
+            
+            }
+        }
+    }
+}
+
+@media (max-width:  979px)
+{
+	.accordion
+	{
+		.accordion-group
+		{
+			.accordion-heading
+			{
+				a.accordion-toggle
+				{
+    				padding: 10px 30px 10px 10px;
+				}
+            }
+			.accordion-body
+			{
+        		.accordion-inner
+				{
+					padding: 15px;
+				}
+			}
+		}
+    }
+}

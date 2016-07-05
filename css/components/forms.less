@@ -1,0 +1,403 @@
+﻿form
+{
+	margin-bottom: 30px;
+}
+.form-field
+{
+	margin-bottom: 1px;
+}
+input[type=text]
+{
+	height: 38px;
+	width: 100%;
+	padding: 0 13px;
+	background: @White;
+	border: 1px solid @Grey;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	font-size: 16px;
+	-webkit-appearance: none;
+    border-radius: 0;
+
+	&.error
+    {
+		background: @InputError;
+		border: 1px solid @InputErrorDark;
+    }
+}
+input[type=submit]
+{
+	border: 0;
+	height: 45px;
+	padding: 0 14px;
+	background: @Blue;
+	color: @White;
+	border-bottom: 5px solid @DarkBlue;
+	.Roboto();
+	font-size: 16px;
+	-webkit-appearance: none;
+    border-radius: 0;
+
+	&:hover, &:focus
+    {
+		background: @BlueHover;
+		border-bottom-width: 2px;
+		transition: background .5s;
+		padding-bottom: 3px;
+    }
+}
+textarea
+{
+	width: 100%;
+	padding: 13px;
+	background: @White;
+	border: 1px solid @Grey;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	font-size: 16px;
+	-webkit-appearance: none;
+    border-radius: 0;
+}
+select
+{
+	line-height: 24px;
+	/*height: 38px;*/
+	width: 100%;
+	padding: 5px 13px;
+	font-size: 16px;
+	-webkit-appearance: none;
+	position: relative;
+	z-index: 2;
+	background-color: #FFF;
+	border: 1px solid @Grey;
+	-webkit-appearance: none;
+    border-radius: 0;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	select
+    {
+    	background: #FFF url(../../img/arrow-select.png) no-repeat right;
+		padding-right: 30px;
+    }
+}
+.sort-by
+{
+	position: absolute;
+	right: 24px;
+	top: 24px;
+
+	label
+    {
+    	float: left;
+		padding-top: 5px;
+		font-size: 14px;
+    }
+	select
+    {
+		width: 160px;
+		float: left;
+		margin-left: 10px;
+    }
+}
+.btn-filter
+{
+	display: none;
+	width: 30%;
+	float: right;
+	text-decoration: none;
+	background: @Blue;
+	color: #FFF;
+
+	&:hover, &:focus
+    {
+    	background: @BlueHover;
+		color: #FFF;
+		text-decoration: none;
+    }
+}
+.radio-group
+{
+	label
+	{
+		background: url(../../img/sprite-form.png) -0px -0px no-repeat;
+		height: 20px;
+		padding-left: 30px;
+		margin-right: 12px;
+		display: inline-block;
+		font-weight: normal;
+		color: @Black;
+	}
+}
+input[type=radio] {
+	position: absolute;
+	left: -100%;
+
+	&:checked + label
+	{
+		background-position: -0px -20px;
+	}
+}
+.checkbox-group
+{
+	label
+	{
+		font-weight: normal;
+		color: @Black;
+
+		&:before
+        {
+        	content: '';
+			background: url(../../img/sprite-form.png) -0px -40px no-repeat;
+			height: 20px;
+			width: 20px;
+			padding-left: 10px;
+			display: inline-block;
+        }
+	}
+}
+input[type=checkbox] {
+	position: absolute;
+	left: -100%;
+
+	&:checked + label:before
+	{
+		background-position: -0px -60px;
+	}
+}
+fieldset
+{
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+label, legend
+{
+	display: block;
+	color: @DarkGrey;
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+span.error
+{
+	color: @Error;
+	font-style: italic;
+	margin-top: 5px;
+	display: block;
+	font-size: 14px;
+}
+
+
+//@-moz-document url-prefix() {
+	//select{
+	//	background: none !important;
+	//	height: auto !important;
+	//	padding-top: 5px;
+	//	padding-bottom: 5px;
+	//}
+//}
+
+.lt-ie7, .lt-ie8, .lt-ie9, .lt-ie10{
+	select{
+		background: none !important;
+		height: auto !important;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+}
+
+.filter
+{
+	h3
+    {
+        color: #FFF;
+		border-bottom: 1px dotted #FFF;
+		margin: 0;
+		padding-bottom: 14px;
+    }
+	label
+    {
+    	color: #FFF;
+		font-weight: normal;
+		margin-top: 20px;
+    }
+	.checkbox-group
+    {
+		label
+        {
+        	margin-top: 5px;
+			font-size: 14px;
+        }
+    }
+	.media-types
+    {
+		a
+        {
+			display: inline-block;
+			width: 32%;
+			margin-left: 1px;
+			color: #FFF;
+			text-decoration: none;
+			text-align: center;
+			font-size: 12px;
+
+			&:first-child
+            {
+            	margin: 0;
+            }
+			span
+			{
+				display: block;
+				background-color: @Blue;
+				border-bottom: 5px solid @DarkBlue;
+				height: 45px;
+				padding-top: 15px;
+
+				&:after
+                {
+                	background-image: url(../../img/sprite.png);
+					background-repeat: no-repeat;
+					display: block;
+					margin: 0 auto;
+                }
+				&.pdf
+				{
+					&:after
+                    {
+						background-position: 0px -264px;
+						content: '';
+						height: 32px;
+						width: 21px;
+                    }
+				}
+				&.video
+				{
+					&:after
+                    {
+						background-position: 0px -232px;
+						content: '';
+						height: 32px;
+						width: 32px;
+                    }
+				}
+				&.podcast
+				{
+					&:after
+                    {
+						background-position: 0px -200px;
+						content: '';
+						height: 32px;
+						width: 31px;
+                    }
+				}
+			}
+			&:hover, &:focus
+            {
+            	span
+                {
+					background-color: @BlueHover;
+					border-width: 2px;
+					padding-bottom: 3px;
+                }
+				&.selected
+                {
+                	span
+                    {
+                    	padding-bottom: 0;
+                    }
+                }
+            }
+			&.selected
+            {
+            	span
+                {
+					background-color: @BlueHover;
+                	height: 53px;
+					border-width: 2px;
+                }
+            }
+		}
+    }
+	.blue-link
+    {
+		margin-top: 20px;
+    }
+}
+.search
+{
+	position: relative;
+
+	input[type=text]
+    {
+		padding: 0 50px 0 13px;
+    }
+	input[type=submit]
+    {
+		position: absolute;
+		width: 40px;
+		text-indent: 50px;
+		padding: 0;
+		right: -2px;
+		top: -6px;
+		color: @Blue;
+		transition: color .5s, background-color .5s;
+        background-image: url(../../img/sprite.png);
+		background-repeat: no-repeat;
+		background-position: 0px -155px;
+
+		&:hover
+        {
+            color: @BlueHover;
+			transition: color .5s, background-color .5s;
+        }
+    }
+}
+
+@media (max-width: 767px)
+{
+	.sort-by
+    {
+    	position: relative;
+		top: 0;
+		right: 0;
+
+		label
+        {
+        	display: block;
+			float: none;
+        }
+		select
+        {
+        	margin: 0;
+			width: 60%;
+			border: none;
+			background-color: @LightGrey;
+		}
+		.btn-filter
+		{
+    		display: inline-block;
+			height: 30px;
+			padding: 8px 0 0 13px;
+			
+			&:after
+			{
+				background: #FFF url(../../img/sprite.png) -20px -75px;
+				width: 20px;
+				height: 20px;
+				.rounded(10px);
+				transition: background-color .5s;
+				content: '';
+				float: right;
+				margin-right: 10px;
+			}
+			&.open
+            {
+            	background: @Black;
+
+				&:after
+                {
+                	background-position: -20px -95px;
+                }
+            }
+		}
+    }
+}

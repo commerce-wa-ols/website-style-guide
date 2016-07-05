@@ -1,0 +1,216 @@
+﻿.lt-ie9
+{
+	// Nav Arrows
+	header
+    {
+		.header-secondary
+        {
+        	.container
+            {
+    			nav.nav-secondary
+				{
+        			.main
+					{
+						> a
+                        {
+							&:after
+							{
+								background: url(../img/sprite-ie8.png) -20px -60px;
+							}
+							&:hover, &:focus, &.current
+							{
+								&:after
+								{
+									background: url(../img/sprite-ie8.png) -20px -20px;
+								}
+							}
+							&.right
+							{
+                        		&:after
+								{
+									background: url(../img/sprite-ie8.png) -20px -40px;
+								}
+								&:hover, &:focus, &.current
+								{
+                            		&:after
+									{
+										background: url(../img/sprite-ie8.png) -20px 0px;
+									}
+								}
+							}
+						}
+						&:hover > a, &:focus > a
+						{
+							&:after
+							{
+								background: url(../img/sprite-ie8.png) -20px -20px;
+                    			background-color: #EBEBEB;
+							}
+						}
+					}
+				}
+            }
+        }
+    }
+
+	// Accordion
+	.accordion
+	{
+		.accordion-group
+		{
+			.accordion-heading
+			{
+        		a.accordion-toggle
+				{
+					&:after
+					{
+						background: url(../img/sprite-ie8.png) 0px -80px;
+					}
+					&:hover
+					{
+						&:after
+						{
+							background: url(../img/sprite-ie8.png) -20px -80px;
+						}
+					}
+					&.accordion-active
+					{
+                		&:after
+						{
+							background: url(../img/sprite-ie8.png) 0px -100px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// Tooltips
+	.arrow:after {
+		background: url(../img/sprite-ie8.png) -47px 0px;
+		content: "";
+		position: absolute;
+		left: 20px;
+		top: 0px;
+		width: 13px;
+		height: 11px;
+		box-shadow: 0;
+	}
+
+	// Forms
+	input[type=text]
+    {
+    	padding-top: 7px;
+    }
+	select
+    {
+    	background-color: #FFF !important;
+    }
+	.radio-group
+	{
+		label
+		{
+			background: none;
+			padding-left: 0;
+		}
+		input[type=radio] {
+			position: relative;
+			left: 0;
+		}
+	}
+	.checkbox-group
+	{
+		label
+		{
+			display: inline-block;
+
+			&:before
+            {
+				background: none;
+				width: 0;
+            }
+		}
+		input[type=checkbox] {
+			position: relative;
+			left: 0;
+		}
+	}
+
+	// External Link
+	a.link
+	{
+		&:after
+        {
+			background: url(../img/sprite-ie8.png) 0px -40px;
+        }
+		&:hover
+        {
+        	&:after
+            {
+				background: url(../img/sprite-ie8.png) 0px -120px;
+            }
+        }
+	}
+
+	// Box-links
+	.box-links
+	{
+		a
+		{
+			&:after
+            {
+				background: url(../img/sprite-ie8.png) 0px -140px;
+            }
+		}
+	}
+
+	// Latest Announcements/Publications
+	.footer-information
+    {
+    	.latest
+        {
+        	.view-all
+            {
+				&:after
+                {
+                	background: url(../img/sprite-ie8.png) -40px -20px;
+                }
+            }
+        }
+    }
+	.scrollable
+    {
+    	.pagination
+        {
+        	a
+            {
+				background: url(../img/sprite-ie8.png) -40px -40px;
+
+            	&.selected
+                {
+					background: url(../img/sprite-ie8.png) -40px -52px;
+                }
+            }
+        }
+    }
+
+	// Footer Links
+	.footer-links
+    {
+    	.online, .offline
+		{
+			display: inline-block;
+			width: 11px;
+			height: 11px;
+
+			&.online
+			{
+				background: url(../img/sprite-ie8.png) -41px -65px;
+			}
+			&.offline
+			{
+				background: url(../img/sprite-ie8.png) -41px -76px;
+			}
+		}
+    }
+}

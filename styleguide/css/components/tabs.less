@@ -1,0 +1,328 @@
+﻿.resp-tabs-list
+{
+	padding: 0;
+}
+
+.resp-tabs-list li {
+    display: block;
+    list-style: none;
+    float: left;
+	margin-right: 1px;
+
+	a
+    {
+		display: block;
+		color: @White;
+		background: @Blue;
+		border: 1px solid @Blue;
+		border-bottom: 1px dotted @Grey;
+		text-decoration: none;
+		padding: 15px 12px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		text-align: center;
+
+		&:hover, &:focus
+		{
+			background: @BlueHover;
+			border: 1px solid @BlueHover;
+			border-bottom: 1px dotted @Grey;
+		}
+    }
+}
+
+.resp-tabs-container {
+    clear: left;
+	margin-top: -1px;
+	overflow: visible;
+	margin-bottom: 30px;
+	border: 1px dotted @Grey;
+	padding: 25px 28px;
+}
+
+h2.resp-accordion {
+    cursor: pointer;
+    display: none;
+}
+
+.resp-tab-content {
+    display: none;
+}
+
+.resp-tabs-list li.resp-tab-active
+{
+	position: relative;
+	&:after
+    {
+		content: " ";
+		position: absolute;
+		display: block;
+		bottom: -1px;
+		height: 1px;
+		background: #fff;
+		left: 0px;
+		right: 0px;
+    }
+}
+
+.resp-tabs-list li.resp-tab-active a {
+	background: @White;
+	color: @Black;
+	border: 1px dotted @Grey;
+	border-bottom: 1px solid @White;
+	position: relative;
+}
+
+.resp-content-active, .resp-accordion-active {
+    display: block;
+}
+
+.resp-tab-content {
+	ul
+	{
+		padding-left: 20px;
+
+		li
+		{
+			margin-bottom: 10px;
+		}
+	}
+}
+
+h2.resp-accordion {
+	color: @Black;
+	text-decoration: none;
+	border-top: 1px dotted @Grey;
+	padding: 10px;
+	outline: none;
+	margin: 0;
+	font-weight: normal;
+	font-size: 16px;
+	transition: background-color .5s, color .5s;
+
+	a
+    {
+    	text-decoration: none;
+		color: @Black;
+    }
+	&:after
+    {
+		content: '';
+		float: right;
+		background: @Blue url(../../img/sprite.png) 0px -35px;
+		width: 20px;
+		height: 20px;
+		.rounded(10px);
+		transition: background-color .5s, color .5s;
+    }
+	&:hover, &:focus
+    {
+		background-color: @DarkBlue;
+		color: @White;
+		transition: background-color .5s, color .5s;
+
+		&:after
+        {
+            background-color: @White;
+			transition: background-color .5s, color .5s;
+			background-position: 0px -135px;
+        }
+		a
+        {
+        	color: #FFF;
+        }
+    }
+	&.resp-tab-active
+    {
+		background-color: @DarkBlue;
+		color: @White;
+
+        &:after
+        {
+			background-position: 0px -55px;
+			background-color: @White;
+        }
+    }
+}
+
+h2.resp-tab-active {
+}
+
+h2.resp-tab-title:last-child {
+}
+/*-----------Vertical tabs-----------*/
+.resp-vtabs ul.resp-tabs-list {
+    float: left;
+    width: 30%;
+}
+
+.resp-vtabs .resp-tabs-list li {
+    display: block;
+    cursor: pointer;
+    float: none;
+}
+
+.resp-vtabs .resp-tabs-container {
+   float: left;
+    width: 69.6%;
+    min-height: 250px;
+    clear: none;
+}
+
+.resp-vtabs .resp-tab-content {
+}
+
+.resp-vtabs li.resp-tab-active {
+    position: relative;
+    z-index: 1;
+}
+
+.resp-arrow {
+    width: 0;
+    height: 0;
+    float: right;
+}
+
+h2.resp-tab-active span.resp-arrow {
+}
+
+/*-----------Accordion styles-----------*/
+h2.resp-tab-active {
+	a
+    {
+    	color: #FFF;
+    }
+}
+.resp-easy-accordion  h2.resp-accordion {
+        display: block;
+}
+.resp-easy-accordion .resp-tab-content {
+}
+
+.resp-easy-accordion .resp-tab-content:last-child {
+}
+
+.resp-jfit {
+    width: 100%;
+    margin: 0px;
+}
+
+.resp-tab-content-active {
+    display: block;
+}
+
+h2.resp-accordion:first-child {
+}
+
+/*Here your can change the breakpoint to set the accordion, when screen resolution changed*/
+@media only screen and (max-width: 768px) {
+    ul.resp-tabs-list {
+        display: none;
+    }
+
+    h2.resp-accordion {
+        display: block;
+    }
+
+    .resp-vtabs .resp-tab-content {
+    }
+
+    .resp-vtabs .resp-tabs-container {
+        border: none;
+        float: none;
+        width: 100%;
+        min-height: initial;
+        clear: none;
+    }
+    .resp-accordion-closed {
+        display:none !important;
+    }
+    .resp-vtabs .resp-tab-content:last-child {
+    }
+
+	.resp-tabs-container
+    {
+    	border: none;
+		padding: 0;
+		margin: 0;
+		border-bottom: 1px dotted @Grey;
+
+		.resp-tab-content
+        {
+        	background: @LightGrey;
+			padding: 15px;
+        }
+    }
+}
+
+
+// ********************************
+// TOOLTIPS
+// ********************************
+.ui-tooltip, .arrow:after {
+		background: @DarkBlue;
+		border: none;
+	}
+	.ui-tooltip {
+		padding: 6px 12px;
+		color: white;
+		border-radius: 0;
+		.Roboto();
+		font-size: 14px;
+		text-transform: normal;
+		box-shadow: 0;
+	}
+	.arrow {
+		width: 70px;
+		height: 16px;
+		overflow: hidden;
+		position: absolute;
+		left: 50%;
+		margin-left: -35px;
+		bottom: -16px;
+	}
+	.arrow.top {
+		top: -16px;
+		bottom: auto;
+	}
+	.arrow.left {
+		left: 20%;
+	}
+	.arrow:after {
+		content: "";
+		position: absolute;
+		left: 20px;
+		top: -20px;
+		width: 25px;
+		height: 25px;
+		box-shadow: 0;
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		tranform: rotate(45deg);
+	}
+	.arrow.top:after {
+		bottom: -20px;
+		top: auto;
+	}
+
+
+.tabs
+{
+	&.white
+    {
+		.resp-tabs-list li a
+        {
+			border: none;
+        }
+		.resp-tabs-container
+        {
+        	border: none;
+			background: #FFF;
+        }
+    }
+
+	padding-bottom: 20px;
+}

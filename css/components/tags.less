@@ -1,0 +1,80 @@
+﻿.tags-wrap
+{
+	border-top: 1px dotted @Grey;
+	border-bottom: 1px dotted @Grey;
+	margin: 20px 0;
+	padding: 10px 0;
+
+	h4
+    {
+    	display: inline-block;
+		float: left;
+    }
+	.tags
+    {
+    	float: left;
+		width: 580px;
+		margin-left: 10px;
+
+		a
+        {
+			background: @Blue;
+			color: #FFF;
+			display: inline-block;
+			float: left;
+			text-decoration: none;
+			padding: 2px 7px 2px 10px;
+			margin: 0 5px 5px 0;
+
+			&:hover
+            {
+            	background: @BlueHover;
+            }
+			&:after
+            {
+				content: "";
+            	background: url(../../img/sprite.png) -21px -43px;
+				width: 14px;
+				height: 14px;
+				display: inline-block;
+				margin-left: 7px;
+            }
+        }
+    }
+}
+
+@media (max-width:  1200px)
+{
+	.tags-wrap
+    {
+    	.tags
+        {
+        	width: 440px;
+        }
+    }
+}
+@media (max-width:  979px)
+{
+	.tags-wrap
+    {
+    	.tags
+        {
+        	width: 310px;
+        }
+    }
+}
+@media (max-width:  767px)
+{
+	.tags-wrap
+    {
+		h4
+        {
+        	display: block;
+        }
+    	.tags
+        {
+        	width: 100%;
+			margin: 0;
+        }
+    }
+}

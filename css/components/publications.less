@@ -1,0 +1,59 @@
+﻿.publication
+{
+	margin-bottom: 30px;
+
+	span
+    {
+		display: inline-block;
+		background-image: url(../../img/sprite.png);
+		vertical-align: middle;
+		margin-left: 5px;
+
+    	&.pdf
+        {
+			background-position: 0px -324px;
+			width: 16px;
+			height: 22px;
+        }
+    	&.video
+        {
+			background-position: 0px -299px;
+			width: 22px;
+			height: 22px;
+        }
+    	&.podcast
+        {
+			background-position: 0px -348px;
+			width: 22px;
+			height: 23px;
+        }
+    }
+	p
+    {
+		margin: .5em 0;
+    }
+
+	.publication-info
+    {
+    	a
+        {
+        	text-decoration: none;
+			color: @DarkGrey;
+			font-size: 12px;
+			border-left: 1px solid @DarkGrey;
+			padding-left: 8px;
+			margin-left: 8px;
+
+			&:hover
+            {
+            	color: @Black;
+            }
+			&:first-child
+            {
+            	border: none;
+				padding: 0;
+				margin: 0;
+            }
+        }
+    }
+}

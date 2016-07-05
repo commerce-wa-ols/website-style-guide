@@ -1,0 +1,43 @@
+﻿.addthis
+{
+	border-top: 1px dotted @Grey;
+	margin: 20px 0;
+	padding-top: 20px;
+
+	a
+    {
+    	display: inline-block;
+		float: left;
+		width: 33px;
+		height: 33px;
+		border-bottom: 3px solid;
+		margin-right: 8px;
+		.text-hide();
+
+		&.twitter
+        {
+        	background: @Twitter url(../../img/services/social/twitter.png) no-repeat center center;
+			border-color: @TwitterBorder;
+        }
+		&.facebook
+        {
+        	background: @Facebook url(../../img/services/social/facebook.png) no-repeat center center;
+			border-color: @FacebookBorder;
+        }
+		&.linkedin
+        {
+        	background: @LinkedIn url(../../img/services/social/linkedin.png) no-repeat center center;
+			border-color: @LinkedInBorder;
+        }
+		&.email
+        {
+        	background: @Email url(../../img/services/social/email.png) no-repeat center center;
+			border-color: @EmailBorder;
+        }
+		&:hover
+        {
+        	border-width: 1px;
+			padding-bottom: 2px;
+        }
+    }
+}

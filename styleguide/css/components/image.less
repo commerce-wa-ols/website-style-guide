@@ -1,0 +1,136 @@
+﻿.caroufredsel_wrapper
+{
+	margin: 0 !important;
+}
+.image_carousel {
+	position: relative;
+}
+.image_carousel img {
+    display: block;
+    float: left;
+	width: 100%;
+	margin-bottom: 30px;
+}
+.image_carousel a {
+    display: block;
+    float: left;
+	text-decoration: none;
+
+	p
+    {
+		color: @DarkGrey;
+		padding: 20px;
+		background: @LightGrey;
+		line-height: 24px;
+    }
+}
+.clearfix {
+    float: none;
+    clear: both;
+}
+.fancybox-title-outside
+{
+	display: none;
+}
+#fancybox-close
+{
+	background: url(../../img/sprite-ie8.png) -20px -100px;
+	width: 20px;
+	height: 20px;
+	top: 10px;
+	right: 10px;
+}
+.fancybox-title-outside
+{
+	background: @LightGrey;
+
+	#fancybox-title-main
+    {
+		color: @Black;
+		padding: 0 20px;
+		font-size: 16px;
+		.Roboto();
+	}
+}
+.prev, .next
+{
+	top: 40%;
+	margin-top: -20px;
+	height: 40px;
+	width: 30px;
+	display: block;
+	position: absolute;
+	border-bottom: 5px solid @DarkBlue;
+	background: @Blue;
+
+	&:before
+    {
+		content: '';
+    	width: 20px;
+		height: 20px;
+		background: url(../../img/sprite.png);
+		display: block;
+		margin-top: 11px;
+		margin-left: 4px;
+    }
+	&:hover
+    {
+		background: @BlueHover;
+		border-bottom-width: 2px;
+		padding-bottom: 3px;
+		transition: none;
+		transition: background .5s;
+    }
+	&.prev
+    {
+		left: 0;
+
+		&:before
+        {
+			background-position: 0px -115px;
+        }
+    }
+	&.next
+    {
+		right: 0;
+
+		&:before
+        {
+			background-position: 0px -95px;
+        }
+    }
+}
+
+/*** IMAGE BLOCK ***/
+.image-container
+{
+    background: #F6F6F6;
+}
+.image-container .image-left
+{
+    float: left;
+    width: 55%;
+    background: #000;
+}
+.image-container .image-left img
+{
+    width: 100%;
+}
+.image-container .image-right
+{
+    float: right;
+    width: 45%;
+}
+.image-container .image-right .image-caption
+{
+    padding: 20px;
+}
+@media (max-width: 979px)
+{
+    .image-container .image-left, .image-container .image-right
+    {
+        float: none;
+        width: 100%;
+    }
+}
+/*** END IMAGE BLOCK ***/

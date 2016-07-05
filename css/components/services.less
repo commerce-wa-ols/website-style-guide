@@ -1,0 +1,112 @@
+﻿.services
+{
+	.service
+    {
+		display: inline-block;
+    	background: @LightGrey;
+		width: 370px;
+		float: left;
+		margin: 0 30px 30px 0;
+		color: @DarkGrey;
+		text-align: center;
+		text-decoration: none;
+
+		&:nth-child(3n)
+        {
+			margin-right: 0;
+        }
+		&.last
+        {
+			margin-right: 0;
+        }
+		h2, p
+        {
+			padding: 0 20px;
+        }
+		div
+        {
+			height: 250px;
+			margin-bottom: 20px;
+			border-bottom: 5px solid;
+
+			&.applications
+			{
+				background: @sRoyalBlue url(../../img/services/applications.png) no-repeat center center;
+				border-color: @sRoyalBlueBorder;
+			}
+			&.renewals
+			{
+				background: @sGreen url(../../img/services/renewals.png) no-repeat center center;
+				border-color: @sGreenBorder;
+			}
+			&.notifications
+			{
+				background: @sMustard url(../../img/services/notifications.png) no-repeat center center;
+				border-color: @sMustardBorder;
+			}
+			&.complaints
+			{
+				background: @sRed url(../../img/services/complaints.png) no-repeat center center;
+				border-color: @sRedBorder;
+			}
+			&.payments
+			{
+				background: @sBlue url(../../img/services/payments.png) no-repeat center center;
+				border-color: @sBlueBorder;
+			}
+			&.finder
+			{
+				background: @sPurple url(../../img/services/finder.png) no-repeat center center;
+				border-color: @sPurpleBorder;
+			}
+			&.chat
+			{
+				background: @sOrange url(../../img/services/chat.png) no-repeat center center;
+				border-color: @sOrangeBorder;
+			}
+        }
+		&:hover
+        {
+        	div
+            {
+            	border-width: 2px;
+				padding-bottom: 3px;
+				opacity: 0.8;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px)
+{
+	.services
+    {
+		.service
+		{
+			width: 293px;
+		}
+	}
+}
+
+@media (max-width: 979px)
+{
+	.services
+    {
+		.service
+		{
+			width: 221px;
+		}
+	}
+}
+
+@media (max-width: 767px)
+{
+	.services
+    {
+		.service
+		{
+			width: 100%;
+			margin-right: 0;
+		}
+	}
+}

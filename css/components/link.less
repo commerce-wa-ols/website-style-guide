@@ -1,0 +1,55 @@
+﻿a.link
+{
+	background: @LightGrey;
+	border-left: 5px solid @Blue;
+	display: block;
+	padding: 25px 20px;
+	margin-bottom: 30px;
+	text-decoration: none;
+	position: relative;
+
+	.link-title
+    {
+		display: block;
+		font-size: 18px;
+		color: @Black;
+		padding-right: 30px;
+    }
+	.link-url
+    {
+		display: block;
+		color: @DarkGrey;
+		font-style: italic;
+		font-size: 13px;
+		padding-right: 30px;
+    }
+
+	&:after
+    {
+		background: @Grey url(../../img/sprite.png) 0px -95px;
+		width: 20px;
+		height: 20px;
+		.rounded(10px);
+		transition: background-color .5s, color .5s;
+		position: absolute;
+		right: 11px;
+		top: 50%;
+		margin-top: -10px;
+		content: '';
+    }
+	&:hover
+    {
+		background: @Blue;
+		
+		.link-title, .link-url
+        {
+        	color: #FFF;
+        }
+		&:after
+        {
+            background-color: #FFF;
+			background-position: -20px -115px;
+			transition: background-color .5s, color .5s;
+        }
+    }
+}

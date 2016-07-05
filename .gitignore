@@ -1,0 +1,5 @@
+# Ignore workshop directory for now
+workshop/
+
+# Ignore zip files
+*.zip
